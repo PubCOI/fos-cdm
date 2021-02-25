@@ -29,6 +29,7 @@
             <xs:element name="Type" type="BatchJobTypeEnum"/>
             <xs:element name="TargetId" type="UuidType"/>
             <xs:element name="Status" type="BatchStatusEnum"/>
+            <xs:element name="Depends" type="UuidType" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
