@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+  ~     PubCOI.org
+  ~     Copyright (C) 2021 Ronald MacDonald
+  ~
+  ~     This program is free software: you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License as published by
+  ~     the Free Software Foundation, either version 3 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~     This program is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU General Public License for more details.
+  ~
+  ~     You should have received a copy of the GNU General Public License
+  ~     along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+<jaxb:bindings version="2.1"
+               xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+               xmlns:xs="http://www.w3.org/2001/XMLSchema"
+               xmlns:annox="http://annox.dev.java.net"
+               jaxb:extensionBindingPrefixes="annox">
+    <jaxb:bindings schemaLocation="../xsd/BatchStatus.xsd" node="/xs:schema">
+        <jaxb:bindings node="//xs:complexType[@name='BatchStatusComplexType']">
+            <annox:annotateClass>@org.springframework.data.mongodb.core.mapping.Document("fos_batch_status")</annox:annotateClass>
+        </jaxb:bindings>
+        <jaxb:schemaBindings>
+            <jaxb:package name="org.pubcoi.fos.cdm.batch"/>
+        </jaxb:schemaBindings>
+    </jaxb:bindings>
+</jaxb:bindings>

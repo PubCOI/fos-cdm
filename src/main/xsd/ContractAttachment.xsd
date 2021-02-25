@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~     PubCOI.org
+  ~     Copyright (C) 2021 Ronald MacDonald
+  ~
+  ~     This program is free software: you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License as published by
+  ~     the Free Software Foundation, either version 3 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~     This program is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU General Public License for more details.
+  ~
+  ~     You should have received a copy of the GNU General Public License
+  ~     along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <xs:element name="Attachment" type="AttachmentComplexType"/>
+
+    <xs:complexType name="AttachmentComplexType">
+        <xs:sequence>
+            <xs:element name="Id" type="uuid"/>
+            <xs:element name="NoticeId" type="uuid"/>
+            <xs:element name="Description" type="xs:string" minOccurs="0"/>
+            <xs:element name="DataType" type="xs:token">
+                <xs:annotation>
+                    <xs:documentation>
+                        Will probably change this to an enum at some point, token will do for now ...
+                        Available types:
+                        Link
+                        AdditionalText
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="Link" type="xs:anyURI" minOccurs="0"/>
+            <xs:element name="TextData" type="xs:string" minOccurs="0"/>
+            <xs:element name="MimeType" type="xs:token" minOccurs="0"/>
+            <xs:element name="AwardGuid" type="uuid" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:simpleType name="uuid">
+        <xs:restriction base="xs:token"/>
+    </xs:simpleType>
+
+</xs:schema>

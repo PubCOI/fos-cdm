@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~     PubCOI.org
+  ~     Copyright (C) 2021 Ronald MacDonald
+  ~
+  ~     This program is free software: you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License as published by
+  ~     the Free Software Foundation, either version 3 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~     This program is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU General Public License for more details.
+  ~
+  ~     You should have received a copy of the GNU General Public License
+  ~     along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <xs:element name="BatchStatus" type="BatchStatusComplexType"/>
+
+    <xs:complexType name="BatchStatusComplexType">
+        <xs:sequence>
+            <xs:element name="Id" type="uuid"/>
+            <xs:element name="NoticeId" type="uuid"/>
+            <xs:element name="Status" type="batchStatusEnum"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="uuid">
+        <xs:restriction base="xs:token"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="batchStatusEnum">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="pending"/>
+            <xs:enumeration value="processing"/>
+            <xs:enumeration value="error"/>
+            <xs:enumeration value="complete"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
