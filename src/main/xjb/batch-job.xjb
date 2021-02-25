@@ -21,9 +21,9 @@
                xmlns:xs="http://www.w3.org/2001/XMLSchema"
                xmlns:annox="http://annox.dev.java.net"
                jaxb:extensionBindingPrefixes="annox">
-    <jaxb:bindings schemaLocation="../xsd/BatchStatus.xsd" node="/xs:schema">
-        <jaxb:bindings node="//xs:complexType[@name='BatchStatusComplexType']">
-            <annox:annotateClass>@org.springframework.data.mongodb.core.mapping.Document("fos_batch_status")</annox:annotateClass>
+    <jaxb:bindings schemaLocation="../xsd/BatchJob.xsd" node="/xs:schema">
+        <jaxb:bindings node="//xs:complexType[@name='BatchJobComplexType']">
+            <annox:annotateClass>@org.springframework.data.mongodb.core.mapping.Document("fos_batch_job")</annox:annotateClass>
         </jaxb:bindings>
         <jaxb:schemaBindings>
             <jaxb:package name="org.pubcoi.fos.cdm.batch"/>

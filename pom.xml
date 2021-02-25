@@ -160,7 +160,7 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>generate-batch-status</id>
+                        <id>generate-batch-job</id>
                         <goals>
                             <goal>generate</goal>
                         </goals>
@@ -170,11 +170,11 @@
                                 <arg>-Xannotate</arg>
                             </args>
                             <schemaIncludes>
-                                <schemaInclude>**/BatchStatus.xsd</schemaInclude>
+                                <schemaInclude>**/BatchJob.xsd</schemaInclude>
                             </schemaIncludes>
                             <bindingIncludes>
                                 <bindingInclude>**/global.xjb</bindingInclude>
-                                <bindingInclude>**/batch-status.xjb</bindingInclude>
+                                <bindingInclude>**/batch-job.xjb</bindingInclude>
                             </bindingIncludes>
                             <plugins>
                                 <plugin>

@@ -5,7 +5,7 @@ import org.pubcoi.fos.models.cf.AdditionalDetailsType;
 
 public class AttachmentFactory {
 
-    public AttachmentFactory() {}
+    private AttachmentFactory() {}
 
     public static Attachment build(AdditionalDetailsType additionalDetailsType) {
 
