@@ -23,7 +23,7 @@
                jaxb:extensionBindingPrefixes="annox">
     <jaxb:bindings schemaLocation="../xsd/ContractAttachment.xsd" node="/xs:schema">
         <jaxb:bindings node="//xs:complexType[@name='AttachmentComplexType']">
-            <annox:annotateClass>@org.springframework.data.mongodb.core.mapping.Document("cf_attachment")</annox:annotateClass>
+            <annox:annotateClass>@org.springframework.data.mongodb.core.mapping.Document("cf_attachments")</annox:annotateClass>
         </jaxb:bindings>
         <jaxb:bindings node="//xs:element[@name='Id']">
             <annox:annotate target="field">@org.springframework.data.annotation.Id</annox:annotate>

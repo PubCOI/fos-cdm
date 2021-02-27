@@ -23,7 +23,7 @@
                jaxb:extensionBindingPrefixes="annox">
     <jaxb:bindings schemaLocation="../xsd/BatchJob.xsd" node="/xs:schema">
         <jaxb:bindings node="//xs:complexType[@name='BatchJobComplexType']">
-            <annox:annotateClass>@org.springframework.data.mongodb.core.mapping.Document("fos_batch_job")</annox:annotateClass>
+            <annox:annotateClass>@org.springframework.data.mongodb.core.mapping.Document("fos_batch_jobs")</annox:annotateClass>
         </jaxb:bindings>
         <jaxb:bindings node="//xs:element[@name='Id']">
             <annox:annotate target="field">@org.springframework.data.annotation.Id</annox:annotate>

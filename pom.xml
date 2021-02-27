@@ -51,6 +51,11 @@
             <version>${version.spring-mongodb}</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>org.jvnet.jaxb2_commons</groupId>
+            <artifactId>jaxb2-basics-runtime</artifactId>
+            <version>${version.jaxb2-basics}</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -132,6 +137,7 @@
                             <args>
                                 <arg>-Xfluent-api</arg>
                                 <arg>-Xannotate</arg>
+                                <arg>-XtoString</arg>
                             </args>
                             <schemaIncludes>
                                 <schemaInclude>**/ContractAttachment.xsd</schemaInclude>

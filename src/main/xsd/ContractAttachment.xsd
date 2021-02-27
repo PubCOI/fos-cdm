@@ -42,6 +42,7 @@
             <xs:element name="TextData" type="xs:string" minOccurs="0"/>
             <xs:element name="MimeType" type="xs:token" minOccurs="0"/>
             <xs:element name="AwardGuid" type="uuid" minOccurs="0"/>
+            <xs:element name="Data" type="xs:hexBinary" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
 
