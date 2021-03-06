@@ -27,6 +27,20 @@
         <jaxb:globalBindings>
             <xjc:simple />
             <xjc:serializable uid="-1" />
+            <!-- Avoid having to work with XMLGregorianCalendar.
+             Instead, map as follows:
+
+                 XML dateTime   :   OffsetDateTime
+                 XML date       :   OffsetDateTime  (time value truncated)
+                 XML time       :   OffsetTime                             -->
+
+            <xjc:javaType adapter="com.addicticks.texttime.jaxb.OffsetDateTimeXmlAdapter"
+                          name="java.time.OffsetDateTime" xmlType="xs:dateTime"/>
+            <xjc:javaType adapter="com.addicticks.texttime.jaxb.OffsetDateXmlAdapter"
+                          name="java.time.OffsetDateTime" xmlType="xs:date"/>
+            <xjc:javaType adapter="com.addicticks.texttime.jaxb.OffsetTimeXmlAdapter"
+                          name="java.time.OffsetTime" xmlType="xs:time"/>
+
         </jaxb:globalBindings>
 
 </jaxb:bindings>
