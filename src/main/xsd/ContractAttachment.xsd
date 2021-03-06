@@ -43,9 +43,18 @@
             <xs:element name="MimeType" type="xs:token" minOccurs="0"/>
             <xs:element name="AwardGuid" type="uuid" minOccurs="0"/>
             <xs:element name="Data" type="xs:hexBinary" minOccurs="0"/>
+            <xs:element name="DocumentType" type="docTypeEnum" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
 
+    <xs:simpleType name="docTypeEnum">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="ORIGINAL"/>
+            <xs:enumeration value="PDF"/>
+            <xs:enumeration value="OCR"/>
+            <xs:enumeration value="NULL"/>
+        </xs:restriction>
+    </xs:simpleType>
 
     <xs:simpleType name="uuid">
         <xs:restriction base="xs:token"/>
