@@ -42,8 +42,21 @@
             <xs:element name="TextData" type="xs:string" minOccurs="0"/>
             <xs:element name="MimeType" type="xs:token" minOccurs="0"/>
             <xs:element name="AwardGuid" type="uuid" minOccurs="0"/>
-            <xs:element name="Data" type="xs:hexBinary" minOccurs="0"/>
-            <xs:element name="DocumentType" type="docTypeEnum" minOccurs="0"/>
+            <xs:element name="Data" type="xs:hexBinary" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        Transient field for storing data between processing steps
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="DocumentType" type="docTypeEnum" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        Transient field for storing document type between processing steps
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="S3Locations" type="s3LocationType" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -59,5 +72,13 @@
     <xs:simpleType name="uuid">
         <xs:restriction base="xs:token"/>
     </xs:simpleType>
+
+    <xs:complexType name="s3LocationType">
+        <xs:sequence>
+            <xs:element name="bucket" type="xs:token"/>
+            <xs:element name="key" type="xs:token"/>
+            <xs:element name="type" type="docTypeEnum"/>
+        </xs:sequence>
+    </xs:complexType>
 
 </xs:schema>

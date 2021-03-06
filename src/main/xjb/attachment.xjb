@@ -28,6 +28,12 @@
         <jaxb:bindings node="//xs:element[@name='Id']">
             <annox:annotate target="field">@org.springframework.data.annotation.Id</annox:annotate>
         </jaxb:bindings>
+        <jaxb:bindings node="//xs:element[@name='Data']">
+            <annox:annotate target="field">@org.springframework.data.annotation.Transient</annox:annotate>
+        </jaxb:bindings>
+        <jaxb:bindings node="//xs:element[@name='DocumentType']">
+            <annox:annotate target="field">@org.springframework.data.annotation.Transient</annox:annotate>
+        </jaxb:bindings>
         <jaxb:schemaBindings>
             <jaxb:package name="org.pubcoi.fos.cdm.attachments"/>
         </jaxb:schemaBindings>
