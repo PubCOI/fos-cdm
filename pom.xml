@@ -143,6 +143,8 @@
                                 <arg>-Xfluent-api</arg>
                                 <arg>-Xannotate</arg>
                                 <arg>-XtoString</arg>
+                                <arg>-XhashCode</arg>
+                                <arg>-Xequals</arg>
                             </args>
                             <schemaIncludes>
                                 <schemaInclude>**/ContractAttachment.xsd</schemaInclude>

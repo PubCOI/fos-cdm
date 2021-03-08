@@ -19,8 +19,11 @@
 <jaxb:bindings version="2.1"
                xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
                xmlns:xs="http://www.w3.org/2001/XMLSchema"
+               xmlns:toString="http://jaxb2-commons.dev.java.net/basic/toString"
+               xmlns:hashCode="http://jaxb2-commons.dev.java.net/basic/hashCode"
+               xmlns:equals="http://jaxb2-commons.dev.java.net/basic/equals"
                xmlns:annox="http://annox.dev.java.net"
-               jaxb:extensionBindingPrefixes="annox">
+               jaxb:extensionBindingPrefixes="annox hashCode toString">
     <jaxb:bindings schemaLocation="../xsd/ContractAttachment.xsd" node="/xs:schema">
         <jaxb:bindings node="//xs:complexType[@name='AttachmentComplexType']">
             <annox:annotateClass>@org.springframework.data.mongodb.core.mapping.Document("cf_attachments")</annox:annotateClass>
@@ -29,10 +32,15 @@
             <annox:annotate target="field">@org.springframework.data.annotation.Id</annox:annotate>
         </jaxb:bindings>
         <jaxb:bindings node="//xs:element[@name='Data']">
+            <toString:ignored/>
             <annox:annotate target="field">@org.springframework.data.annotation.Transient</annox:annotate>
         </jaxb:bindings>
         <jaxb:bindings node="//xs:element[@name='DocumentType']">
             <annox:annotate target="field">@org.springframework.data.annotation.Transient</annox:annotate>
+        </jaxb:bindings>
+        <jaxb:bindings node="//xs:complexType[@name='s3LocationType']/xs:sequence/xs:element[@name='created']">
+            <hashCode:ignored/>
+            <equals:ignored/>
         </jaxb:bindings>
         <jaxb:schemaBindings>
             <jaxb:package name="org.pubcoi.fos.cdm.attachments"/>
