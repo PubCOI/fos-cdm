@@ -18,6 +18,9 @@
 
 package org.pubcoi.cdm.fos;
 
+/**
+ * Fields used on the ES (attachment indexing) instance
+ */
 public class FosESFields {
 
     public static final String TYPE = "type";

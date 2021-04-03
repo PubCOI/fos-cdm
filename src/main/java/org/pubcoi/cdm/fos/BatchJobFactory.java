@@ -29,6 +29,12 @@ public class BatchJobFactory {
 
     private BatchJobFactory() {}
 
+    /**
+     * Used to generate a batch job definition from an {@link Attachment} object
+     * @param attachment The {@link Attachment} object
+     * @param jobType The {@link BatchJobTypeEnum} object
+     * @return a batch job definition, with a {@link BatchStatusEnum} of state PENDING
+     */
     public static BatchJob build(Attachment attachment, BatchJobTypeEnum jobType) {
         return new BatchJob()
                 .withId(UUID.randomUUID().toString())

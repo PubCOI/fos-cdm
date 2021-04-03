@@ -25,6 +25,11 @@ public class AttachmentFactory {
 
     private AttachmentFactory() {}
 
+    /**
+     * Helper to create an Attachment object from an {@link AdditionalDetailsType} object
+     * @param additionalDetailsType The {@link AdditionalDetailsType} object
+     * @return The Attachment object
+     */
     public static Attachment build(AdditionalDetailsType additionalDetailsType) {
 
         return new Attachment()
