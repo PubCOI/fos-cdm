@@ -18,8 +18,7 @@
   ~ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -29,7 +28,7 @@
     </parent>
 
     <artifactId>fos-cdm</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
 
     <name>fos-cdm</name>
     <url>https://github.com/PubCOI/fos-cdm</url>
@@ -39,7 +38,8 @@
         <connection>scm:git:git@github.com:PubCOI/fos-cdm.git</connection>
         <developerConnection>scm:git:git@github.com:PubCOI/fos-cdm.git</developerConnection>
         <url>https://github.com/PubCOI/fos-cdm</url>
-    </scm>
+      <tag>fos-cdm-1.0.1</tag>
+  </scm>
 
     <licenses>
         <license>
@@ -137,9 +137,9 @@
                         </goals>
                         <configuration>
                             <rules>
-                                <banDuplicatePomDependencyVersions/>
-                                <dependencyConvergence/>
-                                <requireReleaseDeps/>
+                                <banDuplicatePomDependencyVersions />
+                                <dependencyConvergence />
+                                <requireReleaseDeps />
                                 <requireMavenVersion>
                                     <version>[3.5,)</version>
                                 </requireMavenVersion>
