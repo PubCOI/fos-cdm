@@ -18,7 +18,7 @@
 
 package org.pubcoi.cdm.fos;
 
-import org.pubcoi.cdm.cf.AdditionalDetailsType;
+import org.pubcoi.cdm.cf.AdditionalDetailType;
 import org.pubcoi.cdm.cf.attachments.Attachment;
 
 public class AttachmentFactory {
@@ -26,21 +26,21 @@ public class AttachmentFactory {
     private AttachmentFactory() {}
 
     /**
-     * Helper to create an Attachment object from an {@link AdditionalDetailsType} object
-     * @param additionalDetailsType The {@link AdditionalDetailsType} object
+     * Helper to create an Attachment object from an {@link org.pubcoi.cdm.cf.AdditionalDetailType} object
+     * @param additionalDetail The {@link org.pubcoi.cdm.cf.AdditionalDetailType} object
      * @return The Attachment object
      */
-    public static Attachment build(AdditionalDetailsType additionalDetailsType) {
+    public static Attachment build(AdditionalDetailType additionalDetail) {
 
         return new Attachment()
-                .withId(additionalDetailsType.getId())
-                .withNoticeId(additionalDetailsType.getNoticeId())
-                .withDescription(additionalDetailsType.getDescription())
-                .withDataType(additionalDetailsType.getDataType())
-                .withLink(additionalDetailsType.getLink())
-                .withTextData(additionalDetailsType.getTextData())
-                .withMimeType(additionalDetailsType.getMimeType())
-                .withAwardGuid(additionalDetailsType.getAwardGuid());
+                .withId(additionalDetail.getId())
+                .withNoticeId(additionalDetail.getNoticeId())
+                .withDescription(additionalDetail.getDescription())
+                .withDataType(additionalDetail.getDataType())
+                .withLink(additionalDetail.getLink())
+                .withTextData(additionalDetail.getTextData())
+                .withMimeType(additionalDetail.getMimeType())
+                .withAwardGuid(additionalDetail.getAwardGuid());
     }
 
 }

@@ -88,7 +88,7 @@
         <dependency>
             <groupId>org.pubcoi.schemas</groupId>
             <artifactId>hmg-contracts-finder</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.addicticks.oss</groupId>
@@ -139,7 +139,6 @@
                             <rules>
                                 <banDuplicatePomDependencyVersions />
                                 <dependencyConvergence />
-                                <requireReleaseDeps />
                                 <requireMavenVersion>
                                     <version>[3.5,)</version>
                                 </requireMavenVersion>
