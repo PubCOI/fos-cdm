@@ -24,7 +24,7 @@
     <parent>
         <groupId>org.pubcoi.fos</groupId>
         <artifactId>parent</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.2-SNAPSHOT</version>
     </parent>
 
     <artifactId>fos-cdm</artifactId>
@@ -64,10 +64,6 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <version.jaxb2-annotate>1.1.0</version.jaxb2-annotate>
-        <version.spring-mongodb>2.2.4.RELEASE</version.spring-mongodb>
-        <version.maven-jaxb2-plugin>0.14.0</version.maven-jaxb2-plugin>
-
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
@@ -97,7 +93,6 @@
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-mongodb</artifactId>
-            <version>${version.spring-mongodb}</version>
         </dependency>
         <dependency>
             <groupId>org.jvnet.jaxb2_commons</groupId>
@@ -106,15 +101,6 @@
     </dependencies>
 
     <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.jvnet.jaxb2.maven2</groupId>
-                    <artifactId>maven-jaxb2-plugin</artifactId>
-                    <version>${version.maven-jaxb2-plugin}</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -165,7 +151,7 @@
                     <dependency>
                         <groupId>org.springframework.data</groupId>
                         <artifactId>spring-data-mongodb</artifactId>
-                        <version>${version.spring-mongodb}</version>
+                        <version>${version.spring-data-mongodb}</version>
                     </dependency>
                 </dependencies>
                 <configuration>
@@ -206,7 +192,7 @@
                                 <plugin>
                                     <groupId>org.jvnet.jaxb2_commons</groupId>
                                     <artifactId>jaxb2-basics-annotate</artifactId>
-                                    <version>${version.jaxb2-annotate}</version>
+                                    <version>${version.jaxb2-basics-annotate}</version>
                                 </plugin>
                                 <plugin>
                                     <groupId>org.jvnet.jaxb2_commons</groupId>
@@ -242,7 +228,7 @@
                                 <plugin>
                                     <groupId>org.jvnet.jaxb2_commons</groupId>
                                     <artifactId>jaxb2-basics-annotate</artifactId>
-                                    <version>${version.jaxb2-annotate}</version>
+                                    <version>${version.jaxb2-basics-annotate}</version>
                                 </plugin>
                                 <plugin>
                                     <groupId>org.jvnet.jaxb2_commons</groupId>
