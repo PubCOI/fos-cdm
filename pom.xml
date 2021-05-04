@@ -24,7 +24,7 @@
     <parent>
         <groupId>org.pubcoi.fos</groupId>
         <artifactId>parent</artifactId>
-        <version>1.0.2-SNAPSHOT</version>
+        <version>1.0.2</version>
     </parent>
 
     <artifactId>fos-cdm</artifactId>
@@ -84,7 +84,7 @@
         <dependency>
             <groupId>org.pubcoi.schemas</groupId>
             <artifactId>hmg-contracts-finder</artifactId>
-            <version>1.0.1-SNAPSHOT</version>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>com.addicticks.oss</groupId>
