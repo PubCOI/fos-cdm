@@ -28,7 +28,7 @@
     </parent>
 
     <artifactId>fos-cdm</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.2</version>
 
     <name>fos-cdm</name>
     <url>https://github.com/PubCOI/fos-cdm</url>
@@ -38,7 +38,7 @@
         <connection>scm:git:git@github.com:PubCOI/fos-cdm.git</connection>
         <developerConnection>scm:git:git@github.com:PubCOI/fos-cdm.git</developerConnection>
         <url>https://github.com/PubCOI/fos-cdm</url>
-      <tag>HEAD</tag>
+      <tag>fos-cdm-1.0.2</tag>
   </scm>
 
     <licenses>
